@@ -1,0 +1,22 @@
+
+<div class="bg-dark-subtle border-bottom border-dark p-2">
+  <h1 class="text-center fw-bold">New Task</h1>
+</div>
+
+<div class="row">
+  <div class="col-5">
+
+  </div>
+  <div class="border border-dark bg-info text-white shadow rounded-2 p-3 mt-5 col-8" style="width: 325px">
+
+    <%= render "form", task: @task %>
+  
+  </div>
+</div>
+
+
+<br>
+
+<div class="text-center pt-4">
+  <%= link_to "Back to tasks", tasks_path %>
+</div>

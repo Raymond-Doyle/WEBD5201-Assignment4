@@ -1,0 +1,33 @@
+
+<div class="bg-dark-subtle border-bottom border-dark p-2">
+  <h1 class="text-center fw-bold">Tasks</h1>
+</div>
+
+<div id="tasks" class="m-5">
+  <% instance = 4 %>
+  <div class="row d-flex align-items-center justify-content-between">
+  <% @tasks.each do |task| %>
+    <div class="col-3">
+      <div class="border border-dark bg-info text-white shadow rounded-2 p-3 mt-5" style="width: 325px">
+        <%= render task %>
+        <p>
+          <%= link_to "Show this task", task %>
+        </p>
+      </div>
+    </div>
+    <% instance = instance - 1 %>
+    <% if instance == 0 %>
+    </div>
+    <div class="row">
+    <% instance = 4 %>
+    <% end %>
+  <% end %>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="text-center pt-4">
+  <%= link_to "To Create a New task, Click Here", new_task_path %>
+</div>
